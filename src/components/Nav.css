@@ -1,0 +1,186 @@
+.nav__menu {
+  background-color: var(--container-color);
+  position: fixed;
+  inset-block: 0;
+  left: -100%;
+  width: 100%;
+  padding: 60px 30px;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.show-menu {
+  left: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-block: 14px;
+}
+
+.nav__icon,
+.nav__name {
+  color: var(--title-color);
+  font-size: 24px;
+}
+
+.nav__name {
+  font-weight: var(--weight-500);
+}
+
+.active-nav .nav__icon,
+.active-nav .name {
+  color: var(--first-color);
+}
+
+.nav__toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--container-color);
+  padding: 12px 10px;
+  cursor: pointer;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  background-color: var(--title-color);
+  margin-bottom: 5px;
+}
+
+.animate-toggle span:first-child {
+  transform: rotate(45deg) translate(6px, 4px);
+  -webkit-transform: rotate(45deg) translate(6px, 4px);
+  -moz-transform: rotate(45deg) translate(6px, 4px);
+  -ms-transform: rotate(45deg) translate(6px, 4px);
+  -o-transform: rotate(45deg) translate(6px, 4px);
+}
+
+.animate-toggle span:nth-child(2) {
+  display: none;
+}
+
+.animate-toggle span:last-child {
+  transform: rotate(45deg) translate(6px, 4px);
+  -webkit-transform: rotate(-45deg) translate(1px, 1px);
+  -moz-transform: rotate(-45deg) translate(1px, 1px);
+  -ms-transform: rotate(-45deg) translate(1px, 1px);
+  -o-transform: rotate(-45deg) translate(1px, 1px);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__menu {
+    all: unset;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav {
+    position: fixed;
+    inset-block: 0;
+    right: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__item {
+    margin-block: 20px;
+  }
+
+  .nav__link {
+    padding: 0;
+    border-bottom: none;
+    background-color: var(--container-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .nav__name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--first-color);
+    height: 100%;
+    line-height: 50px;
+    padding-inline: 30px 25px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    font-size: var(--small-font-size);
+    color: var(--text-white);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    z-index: -1;
+}
+
+  .nav__link:hover .nav__name {
+    right: 27px;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 30px 0 0 30px;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -ms-border-radius: 30px 0 0 30px;
+    -o-border-radius: 30px 0 0 30px;
+}
+
+  /* .active-nav .nav__name {
+    opacity: 1;
+    visibility: visible;
+  } */
+
+  .nav__icon {
+    font-size: 20px;
+    margin-inline: auto;
+  }
+
+  .nav__link:hover,
+  .active-nav {
+    background-color: var(--first-color);
+  }
+
+  .nav__link:hover .nav__icon,
+  .active-nav .nav__icon {
+    color: var(--text-white);
+  }
+}
