@@ -1,0 +1,106 @@
+.style__switcher {
+  position: fixed;
+  left: 0;
+  top: 10%;
+  background-color: var(--text-white);
+  z-index: 10;
+  width: 220px;
+  padding: 15px;
+  box-shadow: 0 0 4px hsl(0, 0%, 80%);
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.show-switcher {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.style__switcher,
+.style__switcher-toggler,
+.theme__toggler {
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+
+.style__switcher-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 4px;
+  row-gap: 8px;
+}
+
+.style__switcher-title,
+s.style__switcher-toggler,
+.theme__toggler,
+.style_switcher-close {
+  color: hsl(0, 0%, 40%);
+}
+
+.style__switcher-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.theme__img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.style__switcher-toggler,
+.theme__toggler {
+  position: absolute;
+  left: 100%;
+  background-color: var(--text-white);
+  height: 50px;
+  width: 50px;
+  font-size: var(--large-font-size);
+  cursor: pointer;
+  place-items: center;
+  box-shadow: 0 0 2px hsl(0, 0%, 80%);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+
+.show-switcher .style__switcher-toggler , .show-switcher .theme__toggler{
+
+left: -100%;
+
+}
+
+.style__switcher-toggler {
+  top: 10%;
+}
+
+.theme__toggler {
+  bottom: 10%;
+}
+
+.style_switcher-close {
+  cursor: pointer;
+  font-size: var(--h2-font-size);
+  position: absolute;
+  top: 2%;
+  right: 15px;
+}

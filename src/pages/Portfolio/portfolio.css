@@ -115,7 +115,7 @@
 .modal__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 10px;
+  row-gap: 10px !important;
   margin-bottom: 24px;
 }
 
@@ -146,3 +146,5 @@
   letter-spacing: 2px;
   margin-bottom: 24px;
 }
+
+
