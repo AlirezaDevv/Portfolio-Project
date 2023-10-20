@@ -1,3 +1,4 @@
+
 import {
   FaHome,
   FaUser,
@@ -97,7 +98,7 @@ export const personalInfo = [
   {
     id: 7,
     title: 'Phone : ',
-    description: '+9399059616630',
+    description: '+989059616630',
   },
 
   {
